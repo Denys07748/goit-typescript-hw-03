@@ -20,7 +20,7 @@ abstract class House {
 
     constructor(protected key: Key) {}   
 
-    abstract OpenDoor(key: Key): void;
+    abstract openDoor(key: Key): void;
 
     comeIn(person: Person): void {
         if(this.door) {
@@ -35,10 +35,6 @@ class MyHouse extends House {
             this.door = true;
         }
     }
-
-    // OpenDoor(key: Key): void {
-    //     this.openDoor(key);
-    // }
 }
 
 const key = new Key();
